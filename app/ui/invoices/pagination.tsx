@@ -71,13 +71,16 @@ function PaginationNumber({
       'z-10 bg-blue-600 border-blue-600 text-white': isActive,
       'hover:bg-gray-100': !isActive && position !== 'middle',
       'text-gray-300': position === 'middle',
-    },
+    }
   );
 
   return isActive || position === 'middle' ? (
     <div className={className}>{page}</div>
   ) : (
-    <Link href={href} className={className}>
+    <Link
+      href={href}
+      className={className}
+    >
       {page}
     </Link>
   );
@@ -99,7 +102,7 @@ function PaginationArrow({
       'hover:bg-gray-100': !isDisabled,
       'mr-2 md:mr-4': direction === 'left',
       'ml-2 md:ml-4': direction === 'right',
-    },
+    }
   );
 
   const icon =
@@ -112,7 +115,10 @@ function PaginationArrow({
   return isDisabled ? (
     <div className={className}>{icon}</div>
   ) : (
-    <Link className={className} href={href}>
+    <Link
+      className={className}
+      href={href}
+    >
       {icon}
     </Link>
   );
