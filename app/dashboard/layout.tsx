@@ -1,5 +1,15 @@
 import React from 'react';
 import SideNav from '../ui/dashboard/sidenav';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Acme Dashboard',
+    default: 'Acem Dashboard',
+  },
+  description: 'The official Next.js Course Dashboard, build with App Router',
+  metadataBase: new URL('http://next-learn-dashboard.vercel.sh'),
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
